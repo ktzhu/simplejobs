@@ -1,4 +1,17 @@
 Simplejobs::Application.routes.draw do
+
+#   get "job_post/index"
+# 
+#   get "job_post/new"
+# 
+#   get "job_post/edit"
+# 
+#   get "job_post/_form"
+# 
+#   get "job_post/show"
+
+	resources :job_posts
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
