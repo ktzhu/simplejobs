@@ -1,0 +1,46 @@
+= form_for(@job_post) do |f|
+	- if @job_post.errors.any?
+		h2 = pluralize(@job_post.errors.count, "error") + " prohibited this product from being saved."
+		ul
+		- @job_post.errors.full_messages.each do |msg|
+			li = msg
+		p
+	h2 [ All fields are required. ]
+	p
+	
+	fieldset#newJob
+		div.field	
+			= f.label :title
+			= f.text_field :title
+
+		div.field
+			= f.label :company
+			= f.text_field :company
+
+		div.field
+			= f.label :description
+			= f.text_area :description, :rows => 7
+
+		div.field
+			= f.label :location
+			= f.text_field :location
+	
+		div.field
+			= f.label :experience
+			= f.text_area :experience, :rows => 7
+
+		div.field
+			= f.label :skills
+			= f.text_area :skills, :rows => 7
+
+		div.field
+			= f.label :industry
+			= f.text_field :industry
+
+		div.field
+			= f.label :pay
+			= f.text_field :pay
+		p
+		
+		div.actions	
+			= f.submit

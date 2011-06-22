@@ -1,0 +1,166 @@
+/* Generic Site Styles */
+
+body {
+  	font-family: Lucida Grande, sans-serif;
+	font-size: 10pt;
+}
+
+h1 {
+	font-size: 16pt;
+	font-weight: bold;
+	text-transform: lowercase;
+}
+
+h2 {
+	font-size: 12pt;
+	font-style: italic;
+}
+
+a:link, a:visited, a:active {
+	text-decoration: none;
+	color: #150517;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+li {
+	margin: 0;
+	padding: 0;
+}
+/* Main Page Job Board Styles */
+
+#branding {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	text-decoration: small-caps;
+	font-size: 26pt;
+	font-weight: bold;
+	text-transform: lowercase;
+}
+
+#mainContent {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	left: 232px;
+}
+
+table {
+	border: 1px solid #666;
+	width: 800px;
+	margin: 0px;
+	padding: 0px;
+}
+
+th {
+	font-size: 12pt;
+	text-align: left;
+	text-transform: lowercase;
+}
+
+td {
+	font-size: 9pt;
+	color: #333;
+}
+
+/* navBar Styles */
+
+li#navBar {
+	background: url(http://www.building-regs.org.uk/graphics/bullet_point.gif) no-repeat 0 50%;
+	padding-left: 30px;
+	line-height: 30px;
+	list-style-type: none;
+}
+
+#mainNav {
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 18px;
+	padding: 5px;
+	display: block;
+	background: black;
+	width: 120px;
+	list-style-type: none;
+}
+
+#mainNav a {
+	display: block;
+	text-decoration: none;
+	color: white;
+	text-transform: lowercase;
+	font-size: 13pt;
+}
+
+#mainNav a:hover {
+	font-style: italic;
+}
+
+/* secondaryNav Styles: for job post-specific navigation */
+
+#secondaryNav {
+	padding-bottom: 20px;
+	position: relative;
+	top: 5px;
+}
+
+li#jobPost {
+	background: url(http://www.stylegala.com/img/_bullets/0200_small%20arrow%20in%20box.png) no-repeat 0 50%;
+	margin: 0;
+	padding: 0;
+	padding-left: 15px;
+	list-style-type: none;
+}
+
+/* Form Styles */
+
+fieldset {
+	border: 1px solid #666;
+	width: 350px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+label {
+	display: block;
+	float: left;
+}
+
+input:focus, textarea:focus {
+	background: #ffc;
+}
+
+.field {
+	width: 200px;
+	margin: 0;
+	margin-bottom: 5px;
+	padding: 0px;
+	font-weight: bold;
+}
+
+#noticeDetails {
+	background-color: yellow;
+	font-style: italic;
+}
+
+/* Job Detail Styles */
+
+#jobInfo {
+	margin: 0;
+	padding: 10px;
+	border: 1px solid #666;
+	line-height: 25px;
+}
+
+span.label {
+	font-weight: bold;
+}

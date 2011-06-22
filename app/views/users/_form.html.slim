@@ -1,0 +1,22 @@
+= form_for(@user) do |f|
+	- if @user.errors.any?
+		h2 = pluralize(@user.errors.count, "error") + " prohibited this user from being saved."
+		ul
+		- @user.errors.full_messages.each do |msg|
+			li = msg
+
+	fieldset#newJob
+		div.field
+			= f.label :name
+			= f.text_field :name
+
+		div.field
+			= f.label :password
+			= f.password_field :password, :size => 40
+
+		div.field
+			= f.label :password_confirmation
+			= f.password_field :password_confirmation, :size => 40
+
+		div.actions
+			= f.submit

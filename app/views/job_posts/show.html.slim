@@ -1,0 +1,36 @@
+- if notice
+	#noticeDetails
+		= notice
+
+h1 Job Details
+
+#jobInfo
+	span.label Title: 
+	span.info = @job_post.title
+	br
+	span.label Company: 
+	span.info = @job_post.company
+	br
+	span.label Description: 
+	span.info = @job_post.description
+	br
+	span.label Location: 
+	span.info = @job_post.location
+	br
+	span.label Experience: 
+	span.info = @job_post.experience
+	br
+	span.label Skills: 
+	span.info = @job_post.skills
+	br
+	span.label Industry: 
+	span.info = @job_post.industry
+	br
+	span.label Pay: 
+	span.info = number_to_currency(@job_post.pay)
+	
+#secondaryNav
+	li#jobPost
+		= link_to 'Edit this post', edit_job_post_path(@job_post)
+	li#jobPost
+		= link_to 'Delete this post', job_post_path, :confirm => "Are you sure you want to delete this post?", :method => :delete

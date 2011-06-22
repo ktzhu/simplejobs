@@ -1,0 +1,25 @@
+doctype html
+html
+	head
+		title simplejobs | jobs made easy
+		meta name="jobs, tech, startups, job search" content="slim"
+		= stylesheet_link_tag "job_posts"
+		= javascript_include_tag :defaults
+		= csrf_meta_tag
+		
+body
+	#branding
+		= @page_title || "Simplejobs | Jobs Made Easy"
+	
+	ul#mainNav
+		li#navBar
+			= link_to 'Home', job_posts_path
+		li#navBar
+			= link_to 'Contact', job_posts_path
+		li#navBar
+			= link_to 'About', job_posts_path
+		li#navBar
+			= link_to "New Job", new_job_post_path
+
+	#mainContent
+		= yield

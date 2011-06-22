@@ -1,0 +1,8 @@
+h1 Edit Your Job Post
+= render 'form'
+
+#secondaryNav
+	li#jobPost
+		= link_to 'Show post details', job_post_path(@job_post)
+	li#jobPost
+		= link_to 'Delete this post', job_post_path, :confirm => "Are you sure you want to delete this post?", :method => :delete

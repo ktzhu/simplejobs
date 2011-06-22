@@ -1,14 +1,16 @@
 Simplejobs::Application.routes.draw do
 
-#   get "job_post/index"
-# 
-#   get "job_post/new"
-# 
-#   get "job_post/edit"
-# 
-#   get "job_post/_form"
-# 
-#   get "job_post/show"
+  get "admin" => "admin#index"
+  
+  controller :sessions do
+      get 'login' => :new
+      post 'login' => :create
+      delete 'logout' => :destroy
+  end
+
+  resources :users
+
+  get "job_board/index"
 
 	resources :job_posts
 
@@ -62,7 +64,8 @@ Simplejobs::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => "welcome#index"
-
+  root :to => 'job_board#index', :as => 'job_board'
+  
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.

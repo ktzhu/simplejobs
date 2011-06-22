@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110617190840) do
+ActiveRecord::Schema.define(:version => 20110620231856) do
 
   create_table "job_posts", :force => true do |t|
     t.string   "title"
@@ -22,9 +22,18 @@ ActiveRecord::Schema.define(:version => 20110617190840) do
     t.decimal  "pay",         :precision => 10, :scale => 0
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "company"
   end
 
   create_table "posts", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "hashed_password"
+    t.string   "salt"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

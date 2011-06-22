@@ -7,7 +7,7 @@ class CreateJobPosts < ActiveRecord::Migration
       t.text :experience
       t.text :skills
       t.string :industry
-      t.decimal :pay
+      t.decimal :pay, :precision => 8, :scale => 2
 
       t.timestamps
     end
