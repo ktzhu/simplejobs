@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class JobPostTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
+  fixtures :job_posts
+  
   test "job post attributes must not be empty" do
     job_post = JobPost.new
     assert job_post.invalid?
@@ -30,4 +31,5 @@ class JobPostTest < ActiveSupport::TestCase
     job_post.pay = 1
     assert job_post.valid?
   end
+
 end

@@ -3,6 +3,5 @@ class JobPost < ActiveRecord::Base
   
   validates_presence_of [:title, :company, :description, :location, :experience, :skills,
                          :industry, :pay]
-  validates_uniqueness_of :title
   validates :pay, :numericality => {:greater_than_or_equal_to => 0.01}
 end

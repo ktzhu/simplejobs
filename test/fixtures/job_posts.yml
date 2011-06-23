@@ -1,19 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  title: MyString
-  description: MyText
-  location: MyString
-  experience: MyText
-  skills: MyText
-  industry: MyString
-  pay: 9.99
-
-two:
-  title: MyString
-  description: MyText
-  location: MyString
-  experience: MyText
-  skills: MyText
-  industry: MyString
-  pay: 9.99
+GOOD:
+  title: Software Engineer
+  company: GOOD
+  description: Build pretty web apps
+  location: Los Angeles
+  experience: Agile development
+  skills: Awesomeness
+  industry: New Media
+  pay: 300.00
