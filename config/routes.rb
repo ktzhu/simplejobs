@@ -1,7 +1,5 @@
 Simplejobs::Application.routes.draw do
 
-  resources :line_items
-
   get "admin" => "admin#index"
   
   controller :sessions do

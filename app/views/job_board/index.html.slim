@@ -17,4 +17,6 @@ h1 your simple Job Board
 		.jobActions
 			= link_to 'Details', job_post
 			|  | 
-			= link_to 'Apply!', line_items_path(:job_post_id => job_post)
+			= link_to 'Apply!', job_post
+			
+/ line_items_path(:job_post_id => job_post)
