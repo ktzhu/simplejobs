@@ -14,4 +14,20 @@ class JobPostTest < ActiveSupport::TestCase
     assert job_post.errors[:industry].any?
     assert job_post.errors[:pay].any?
   end
+  
+  test "job pay must be positive" do
+    job_post = JobPost.new( :title        => "Cool Master",
+                            :company      => "GOOD",
+                            :description  => "Be cool.",
+                            :location     => "Los Angeles, CA",
+                            :experience   => "None required.",
+                            :skills       => "Be awesome.",
+                            :industry     => "New Media")
+    job_post.pay = -1
+    assert job_post.invalid?
+    assert_equal "must be greater than or equal to 0.01", job_post.errors[:pay].join('; ')
+    
+    job_post.pay = 1
+    assert job_post.valid?
+  end
 end
