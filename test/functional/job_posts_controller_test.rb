@@ -10,6 +10,7 @@ class JobPostsControllerTest < ActionController::TestCase
       :location     => 'Los Angeles, CA',
       :experience   => 'Lots.',
       :skills       => 'All of them.',
+      :industry     => 'Media',
       :pay          => '250.45'
     }
   end
@@ -30,7 +31,7 @@ class JobPostsControllerTest < ActionController::TestCase
       post :create, :job_post => @update
     end
     
-    assert_redirected_to_job_post_path(assigns(:job_post))
+    assert_redirected_to job_post_path(assigns(:job_post))
   end
   
   test "should update job" do
@@ -53,7 +54,7 @@ class JobPostsControllerTest < ActionController::TestCase
       delete :destroy, :id => @job_post.to_param
     end
 
-    assert_redirected_to job_post_path
+    assert_redirected_to job_posts_url
   end
 
 end

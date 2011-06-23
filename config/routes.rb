@@ -1,6 +1,7 @@
 Simplejobs::Application.routes.draw do
 
   get "admin" => "admin#index"
+  get "job_board/index"
   
   controller :sessions do
       get 'login' => :new
@@ -9,11 +10,9 @@ Simplejobs::Application.routes.draw do
   end
 
   resources :users
-
-  get "job_board/index"
-
 	resources :job_posts
-	resources :cart
+	
+	root :to => 'job_board#index', :as => 'job_board'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -65,7 +64,6 @@ Simplejobs::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => "welcome#index"
-  root :to => 'job_board#index', :as => 'job_board'
   
   # See how all your routes lay out with "rake routes"
 
