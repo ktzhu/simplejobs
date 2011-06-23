@@ -2,7 +2,7 @@ require 'test_helper'
 
 class JobPostsControllerTest < ActionController::TestCase
   setup do
-    @job_post = JobPost.new
+    @job_post = job_posts(:one)
     @update = {
       :title        => 'Designer',
       :company      => 'GOOD',

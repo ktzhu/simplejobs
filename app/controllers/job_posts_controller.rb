@@ -1,4 +1,5 @@
 class JobPostsController < ApplicationController
+  skip_before_filter :authorize
   # GET /job_posts
   # GET /job_posts.xml
   def index
