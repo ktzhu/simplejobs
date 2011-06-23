@@ -1,5 +1,7 @@
 Simplejobs::Application.routes.draw do
 
+  resources :line_items
+
   get "admin" => "admin#index"
   
   controller :sessions do
@@ -13,6 +15,7 @@ Simplejobs::Application.routes.draw do
   get "job_board/index"
 
 	resources :job_posts
+	resources :cart
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

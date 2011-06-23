@@ -1,0 +1,7 @@
+- if notice
+	= notice
+
+/ h1 Your Job Cart
+/ ul
+/ 	- @cart.line_items.each do |item|
+/ 		li = item.job_post.title

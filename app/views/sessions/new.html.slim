@@ -1,19 +1,18 @@
 - if flash[:alert]
 	= flash[:alert]
-	
+
+h1 Please log in.
 = form_tag do
-	fieldset
-		h3 Please log in.
-		
-		div
-			label for ="name"
-				Name:
+	fieldset#newJob
+		div.field
+			label Name:
+			br
 			= text_field_tag :name, params[:name]
-		
-		div
-			label for "password"
-				Password:
+		p
+		div.field
+			label Password:
+			br
 			= password_field_tag :password, params[:password]
-			
-		div
+		p
+		div.actions
 			= submit_tag "Login"

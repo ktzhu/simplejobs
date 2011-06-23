@@ -1,42 +1,30 @@
 - if notice
-	= notice
+	#noticeDetails
+		= notice
 
-h1 Your Job Board
-#job_list
-	table.table-list
+h1 your simple Job Board
+table cellspacing="10px"
+	thead
 		tr
-			td
-				h3 Title
-			td
-			  h3 Company
-			td
-				h3 Description
-			td
-				h3 Location
-			td
-				h3 Experience
-			td
-				h3 Skills
-			td
-				h3 Industry
-			td
-				h3 Pay
-			td
-				h3 Actions
-		
+			th Title
+			th Company
+			th Description
+			th Location
+			th Experience
+			th Skills
+			th Industry
+			th Pay
+			th Actions
+	tbody
+	- @job_posts.each do |job_post|
 		tr
-		- @job_posts.each do |job_post|
-			#job_info
-				tr
-					td = job_post.title
-					td = job_post.company
-					td = job_post.description
-					td = job_post.location
-					td = job_post.experience
-					td = job_post.skills
-					td = job_post.industry
-					td = number_to_currency(job_post.pay)
-					td = link_to 'More', job_post
-					td = link_to 'Apply', job_post
-				br
-br
+			td = job_post.title
+			td = job_post.company
+			td = job_post.description
+			td = job_post.location
+			td = job_post.experience
+			td = job_post.skills
+			td = job_post.industry
+			td = number_to_currency(job_post.pay)
+			td = link_to 'Details', job_post
+			td = button_to 'Apply!', line_items_path(:job_post_id => job_post)

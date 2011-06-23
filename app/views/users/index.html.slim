@@ -3,18 +3,17 @@ h1 Users
 	= notice
 
 table
-	tr
-		th Name
-		th
-		th
-		th
+	thead
+		tr
+			th Name
+			th
 		
-	tr
+	tbody
 	- @users.each do |user|
-		td = user.name
-		td = link_to 'Show', user
-		td = link_to 'Edit', edit_user_path(user)
-		td = link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete
-
+		tr
+			td = user.name
+			td = link_to 'Show', user
+			td = link_to 'Edit', edit_user_path(user)
+			td = link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete
 br
 = link_to 'New User', new_user_path
