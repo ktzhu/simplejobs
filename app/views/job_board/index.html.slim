@@ -3,28 +3,18 @@
 		= notice
 
 h1 your simple Job Board
-table cellspacing="10px"
-	thead
-		tr
-			th Title
-			th Company
-			th Description
-			th Location
-			th Experience
-			th Skills
-			th Industry
-			th Pay
-			th Actions
-	tbody
-	- @job_posts.each do |job_post|
-		tr
-			td = job_post.title
-			td = job_post.company
-			td = job_post.description
-			td = job_post.location
-			td = job_post.experience
-			td = job_post.skills
-			td = job_post.industry
-			td = number_to_currency(job_post.pay)
-			td = link_to 'Details', job_post
-			td = button_to 'Apply!', line_items_path(:job_post_id => job_post)
+- @job_posts.each do |job_post|
+	.jobEntry
+		.jobLabel
+			= job_post.title
+			|  @ 
+			= job_post.company
+		.jobDetail
+			= job_post.location
+			p
+			= job_post.description
+			p
+		.jobActions
+			= link_to 'Details', job_post
+			|  | 
+			= link_to 'Apply!', line_items_path(:job_post_id => job_post)

@@ -2,18 +2,15 @@ h1 Users
 - if notice
 	= notice
 
-table
-	thead
-		tr
-			th Name
-			th
-		
-	tbody
-	- @users.each do |user|
-		tr
-			td = user.name
-			td = link_to 'Show', user
-			td = link_to 'Edit', edit_user_path(user)
-			td = link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete
-br
 = link_to 'New User', new_user_path
+p
+- @users.each do |user|
+	.jobEntry
+		.jobLabel
+			= user.name
+		.jobActions
+			= link_to 'Show', user
+			|  | 
+			= link_to 'Edit', edit_user_path(user)
+			|  | 
+			= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete

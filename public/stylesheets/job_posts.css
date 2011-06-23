@@ -44,6 +44,12 @@ li {
 }
 /* Main Page Job Board Styles */
 
+#wrapper {
+	width: 720px;
+	position: relative;
+	left: 50%;
+	margin-left: -360px;
+}
 #branding {
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -56,29 +62,41 @@ li {
 
 #mainContent {
 	margin: 0;
-	padding: 0;
-	position: absolute;
-	left: 232px;
-	width: 900px;
+	padding: 20px;
+	float: left;
+	width: 400px;
+	overflow: hidden;
 }
 
-table {
-	border: 1px solid #666;
-	margin: 0px;
-	padding: 0px;
+.jobEntry {
+	padding: 10px;
+	margin-bottom: 20px;
+	border: 1px dotted #666;
+	overflow: hidden;
 }
 
-th {
-	font-size: 12pt;
-	text-align: left;
-	text-transform: lowercase;
+.jobLabel {
+	font-size: 11pt;
+	font-weight: bold;
+	font-style: italic;
 }
 
-td {
-	font-size: 9pt;
-	color: #333;
+.jobDetail {
+	font-size: 10pt;
 }
 
+.jobActions {
+	float: right;
+	padding: 5px;
+	font-size: 8pt;
+	text-transform: uppercase;
+	color: black;
+}
+
+#footer {
+	clear: both;
+	float: right;
+}
 /* navBar Styles */
 
 li#navBar {
@@ -92,7 +110,7 @@ li#navBar {
 	float: left;
 	margin-left: 10px;
 	margin-right: 10px;
-	margin-top: 18px;
+	margin-top: 38px;
 	padding: 5px;
 	display: block;
 	background: black;
@@ -114,7 +132,7 @@ li#navBar {
 
 #admin {
 	position: absolute;
-	top: 35px;
+	top: 25px;
 	left: 550px;
 }
 
@@ -171,9 +189,9 @@ input:focus, textarea:focus {
 #jobInfo {
 	margin: 0;
 	padding: 10px;
-	border: 1px solid #666;
+	border: 1px dotted #666;
 	line-height: 25px;
-	width: 400px;
+	width: auto;
 }
 
 span.label {
