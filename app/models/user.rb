@@ -31,6 +31,14 @@ class User < ActiveRecord::Base
     end
   end
   
+  after_destroy :ensure_an_admin_remains
+  
+  def ensure_an_admin_remains
+    if User.count.zero?
+      raise "Error: can't delete the last user!"
+    end
+  end
+  
   private
     def password_must_be_present
       errors.add(:password, "Missing password") unless hashed_password.present?
