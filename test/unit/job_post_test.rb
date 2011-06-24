@@ -31,5 +31,4 @@ class JobPostTest < ActiveSupport::TestCase
     job_post.pay = 1
     assert job_post.valid?
   end
-
 end
