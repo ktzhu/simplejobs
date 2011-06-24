@@ -2,7 +2,7 @@ require 'test_helper'
 
 class UsersControllerTest < ActionController::TestCase
   setup do
-    @input_attributes = { :name                   => "kaz600",
+    @input_attributes = { :name                   => "nicole",
                           :password               => "private",
                           :password_confirmation  => "private"
                         }
