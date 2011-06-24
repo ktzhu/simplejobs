@@ -1,7 +1,8 @@
 h1 Users
 - if notice
-	= notice
-
+	#noticeDetails
+		= notice
+p
 = link_to 'New User', new_user_path
 p
 - @users.each do |user|

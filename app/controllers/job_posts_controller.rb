@@ -1,5 +1,4 @@
 class JobPostsController < ApplicationController
-  skip_before_filter :authorize
   # GET /job_posts
   def index
     @job_posts = JobPost.all

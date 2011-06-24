@@ -29,9 +29,6 @@ class UsersController < ApplicationController
   # POST /users
   def create
     @user = User.new(params[:user])
-    logger.info @user.inspect
-    logger.info @user.valid?
-    logger.info @user.errors.inspect
     if @user.save
       redirect_to(users_url, :notice => "User #{@user.name} was successfully created.")
     else
@@ -53,12 +50,12 @@ class UsersController < ApplicationController
   # DELETE /users/1
   def destroy
     @user = User.find(params[:id])
-    begin
-      @user.destroy
-      flash[:notice] = "User #{@user.name} deleted."
-    rescue Exception => e
-      flash [:notice] = e.message
-    end
+    # begin
+    #   @user.destroy
+    #   flash[:notice] = "User #{@user.name} deleted."
+    # rescue Exception => e
+    #   flash [:notice] = e.message
+    # end
     
     redirect_to(users_url)
   end
