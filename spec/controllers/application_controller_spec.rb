@@ -1,5 +1,4 @@
 require "spec_helper"
-# require File.dirname(__FILE__) + "controller_macros"
 
 describe JobBoardController do
   render_views
@@ -10,7 +9,7 @@ describe JobBoardController do
       response.should render_template(:index)
     end
     
-    it should_require_admin_for_actions :new, :create, :edit, :update, :destroy
+    it_should_require_admin_for_actions :new, :create, :edit, :update, :destroy
   end
   
   describe "as admin" do
