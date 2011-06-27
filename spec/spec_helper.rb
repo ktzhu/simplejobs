@@ -24,6 +24,8 @@ RSpec.configure do |config|
   config.extend(ControllerMacros, :type => :controller)
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
+  config.use_transactional_fixtures = true
+  config.use_instantiated_fixtures = false
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
